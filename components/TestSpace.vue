@@ -7,15 +7,17 @@
       <input
         type="number"
         v-model="inputData"
+        min="1"
         @blur="onBlur"
         @focus="onFocus"
+        @keydown.69.prevent
+        @keydown.189.prevent
       />
     </div>
     <div>
       <label>出力</label>
       <textarea
         v-model="outputData"
-        readonly
         style="height: 500px; width: 200px;"
       />
     </div>
